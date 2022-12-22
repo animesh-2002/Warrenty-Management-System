@@ -1,0 +1,13 @@
+.footer-content{
+    background-color: #d4b4e9;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+    height: 200px;
+}

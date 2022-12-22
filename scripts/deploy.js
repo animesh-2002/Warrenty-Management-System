@@ -19,17 +19,17 @@ async function main() {
 
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
-  const Token = await ethers.getContractFactory("Token");
-  const token = await Token.deploy();
-  await token.deployed();
+  const WarrantyManagement = await ethers.getContractFactory("WarrantyManagement");
+  const warrantyManagement = await WarrantyManagement.deploy();
+  await warrantyManagement.deployed();
 
-  console.log("Token address:", token.address);
+  console.log("WarrantyManagement address:", warrantyManagement.address);
 
   // We also save the contract's artifacts and address in the frontend directory
-  saveFrontendFiles(token);
+  saveFrontendFiles(warrantyManagement);
 }
 
-function saveFrontendFiles(token) {
+function saveFrontendFiles(warrantyManagement) {
   const fs = require("fs");
   const contractsDir = __dirname + "/../frontend/src/contracts";
 
@@ -39,14 +39,14 @@ function saveFrontendFiles(token) {
 
   fs.writeFileSync(
     contractsDir + "/contract-address.json",
-    JSON.stringify({ Token: token.address }, undefined, 2)
+    JSON.stringify({ warrantyManagement: warrantyManagement.address }, undefined, 2)
   );
 
-  const TokenArtifact = artifacts.readArtifactSync("Token");
+  const WarrantyManagementArtifact = artifacts.readArtifactSync("WarrantyManagement");
 
   fs.writeFileSync(
-    contractsDir + "/Token.json",
-    JSON.stringify(TokenArtifact, null, 2)
+    contractsDir + "/WarrantyManagement.json",
+    JSON.stringify(WarrantyManagementArtifact, null, 2)
   );
 }
 

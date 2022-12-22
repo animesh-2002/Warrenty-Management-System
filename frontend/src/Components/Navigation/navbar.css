@@ -1,0 +1,18 @@
+.connect-wallet {
+    background-color: #4f2b68;
+    text-emphasis: bold;
+    text-emphasis-color: white;
+    color:white;
+    align-self: right;
+    margin-left: 500px;
+    border: none;
+    border-radius: 5px;
+}
+
+.navigation-bar {
+    background-color: #d4b4e9;
+    text-emphasis: bold;
+    text-emphasis-color: white;
+    border: none;
+    border-radius: 5px;
+}

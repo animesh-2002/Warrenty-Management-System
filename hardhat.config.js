@@ -7,10 +7,16 @@ require("./tasks/faucet");
 
 // If you are using MetaMask, be sure to change the chainId to 1337
 module.exports = {
-  solidity: "0.8.3",
   networks: {
-    hardhat: {
-      chainId: 31337
-    }
-  }
+    mumbai: {
+      url: "https://polygon-mumbai.g.alchemy.com/v2/d-yzortyRcKbZBz9UWR5q3uLMk39oz6K",
+      chainId: 80001,
+      gas: 6000000,
+      gasPrice: 10000000000,
+      accounts: [
+        "df338747cd314cd64589d9bfec4ce67fc147f97533ae2cbf0243bdd1bff87b93",
+      ],
+    },
+  },
+  solidity: "0.8.3",
 };

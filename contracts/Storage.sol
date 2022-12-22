@@ -5,7 +5,6 @@ import "./Structs.sol";
 
     contract Storage {
 
-        mapping(bytes32 => Structs.Publisher) internal Publishers;
-        mapping(bytes32 => Structs.Reviewer) internal Reviewers;
-        mapping(bytes32 => Structs.ResearchDocument) internal ResearchDocuments;
+        mapping(bytes32 => Structs.WarrantyCard) internal warrantycards;
+        mapping(bytes32 => Structs.Buyer) internal buyers;
     }
